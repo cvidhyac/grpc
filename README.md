@@ -1,74 +1,36 @@
-# grpc
-GRPC microservices with Java
+# Check your understanding
 
-## Evolution of inter-service communication
+Think through these questions to recollect the different concepts
 
-RPC -> SOAP -> REST
+To review the notes refer the doc links
 
-### Disadvantages of RPC
-- Uses TCP, inherently very complex
-- Prone to vulnerabilities
+## Doc links
 
-### Disadvantages of SOAP
-- XML based contracts
-- Reading, parsing XML has additional overheads
-- Heavy payloads and distributed apps are a problem.
+[gRPC Overview](docs/grpc_overview.md)
 
-### Disadvantages of REST
-- Text sent by app is converted to Binary and Binary conversion from REST protocol to Text accepted by app adds to application overhead
-- Exposes only CRUD behaviours
-- Stateless, so incompatibility and inconsistency when API is upgraded.
+## gRPC foundations
 
-## Why gRPC?
-- Uses HTTP/2 protocol, high performance framework.
-- More efficient for inter-service communication. 
+- What is gRPC?
+- How has the interservice communication evolved?
+- gRPC overview, key features?
+- What are the key differences between HTTP/1 and HTTP/2? How is HTTP/2 better than HTTP/1?
+- How does gRPC differ from REST?
 
-### What is the difference between HTTP/1 and HTTP/2 protocol?
+## gRPC basics
 
-| HTTP 1        | HTTP/2        |
-|-------------- |---------------|
-| Text Based | Binary protocol |
-| Needs text -> binary and binary -> REST conversion | Text -> Binary and Binary -> Text not necessary  |
+- gRPC building blocks
+- gRPC utilities and steps to develop a project
 
-| REST      | gRPC        |
-| No support for protocol buffers | Implemented using protocol buffers, which is very efficient |
-| No defined interfaces | Strictly defined interfaces |
-| No support for typing | Strongly typed  |
-| Not polyglot          | polyglot services |
+## gRPC set up
 
-### Features of gRPC
-- HTTP/2
-- Uses protocol buffers as IDL (Interface Definition Language)
-- Support for bidirectional streaming
-- Support for cross-cutting concerns such as authentication and error handling out of the box.
-- Integrates well with cloud-native platforms
-
-### Disadvantages of gRPC
-- Limited browser support, specially designed for backend
-- Request and response data is binary, so not human readable anymore.
-- Service definition changes will need to regenerate client stubs similar to SOAP.
-
-## HTTP/1.1 problems
-- Limits in number of TCP connections.
-- Requests and responses should come in the same order before being sent to the client. 
-- Pipelining connections - it means multiple requests can be sent together in one call, so if one request is blocked, lets say because of database call, then the rest of the execution is blocked. This is what is the Head of Line blocking (HOL) I/O problem.
-
-## How does HTTP/2 work?
-
-### Key terms 
-- Streams - Set of messages
-- Message - Sequence of frames - Http message
-- Frames - Smallest unit - Frame header and body. Frame header indicates which stream it belongs to
-
-Frames are interleaved or mixed when transported via HTTP/2. They are reassembled at the end of the stream.
-Streams are fully multiplexed in a single TCP connection.
-
-## How is HTTP/2 better?
-
-## Understand protocol buffers
-
-
-
-
-
+- Download & Unzip :  https://github.com/google/protobuf/releases
+- Make sure you download the protoc executable, not protoc-all.zip
+- Add the protoc path to the PATH
+- The .proto file should be placed in src/main/proto for this specific plugin  
+- The general best practice is to keep the code-generation tight to the source code, hence I have
+opted to use the maven plugin over the painful process of using the raw compiler (on my Mac, its harder)
+ 
+There are two portions to this set up 
+- Compiler - auto-generates the messages and objects.
+- protoc-grpc-gen-java plugin - This generates the GRPC Service code with RPC methods.
 
