@@ -48,4 +48,27 @@ RPC -> SOAP -> REST
 - Request and response data is binary, so not human readable anymore.
 - Service definition changes will need to regenerate client stubs similar to SOAP.
 
+## HTTP/1.1 problems
+- Limits in number of TCP connections.
+- Requests and responses should come in the same order before being sent to the client. 
+- Pipelining connections - it means multiple requests can be sent together in one call, so if one request is blocked, lets say because of database call, then the rest of the execution is blocked. This is what is the Head of Line blocking (HOL) I/O problem.
+
+## How does HTTP/2 work?
+
+### Key terms 
+- Streams - Set of messages
+- Message - Sequence of frames - Http message
+- Frames - Smallest unit - Frame header and body. Frame header indicates which stream it belongs to
+
+Frames are interleaved or mixed when transported via HTTP/2. They are reassembled at the end of the stream.
+Streams are fully multiplexed in a single TCP connection.
+
+## How is HTTP/2 better?
+
+## Understand protocol buffers
+
+
+
+
+
 
