@@ -21,6 +21,11 @@ To review the notes refer the doc links
 - gRPC building blocks
 - gRPC utilities and steps to develop a project
 
+## gRPC components
+- Why do you need metadata ?
+- How does channel help in gRPC ?
+- Types of gRPC calls, and use cases how it can be applied
+
 ## gRPC set up
 
 - Download & Unzip :  https://github.com/google/protobuf/releases
