@@ -15,6 +15,7 @@ public class UserServer {
   public void startServer() {
     int port = 50051;
     try {
+      LOGGER.info("Start user server");
       server = ServerBuilder
           .forPort(port)
           .addService(new UserServiceImpl())
