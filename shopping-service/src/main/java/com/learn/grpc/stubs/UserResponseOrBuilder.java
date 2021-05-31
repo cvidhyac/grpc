@@ -53,4 +53,10 @@ public interface UserResponseOrBuilder extends
    * @return The gender.
    */
   com.learn.grpc.stubs.Gender getGender();
+
+  /**
+   * <code>int32 number_of_orders = 6;</code>
+   * @return The numberOfOrders.
+   */
+  int getNumberOfOrders();
 }

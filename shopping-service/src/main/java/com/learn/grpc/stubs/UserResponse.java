@@ -79,6 +79,11 @@ private static final long serialVersionUID = 0L;
             gender_ = rawValue;
             break;
           }
+          case 48: {
+
+            numberOfOrders_ = input.readInt32();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -228,6 +233,17 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.learn.grpc.stubs.Gender.UNRECOGNIZED : result;
   }
 
+  public static final int NUMBER_OF_ORDERS_FIELD_NUMBER = 6;
+  private int numberOfOrders_;
+  /**
+   * <code>int32 number_of_orders = 6;</code>
+   * @return The numberOfOrders.
+   */
+  @java.lang.Override
+  public int getNumberOfOrders() {
+    return numberOfOrders_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -257,6 +273,9 @@ private static final long serialVersionUID = 0L;
     if (gender_ != com.learn.grpc.stubs.Gender.MALE.getNumber()) {
       output.writeEnum(5, gender_);
     }
+    if (numberOfOrders_ != 0) {
+      output.writeInt32(6, numberOfOrders_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -284,6 +303,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, gender_);
     }
+    if (numberOfOrders_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, numberOfOrders_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -308,6 +331,8 @@ private static final long serialVersionUID = 0L;
     if (getAge()
         != other.getAge()) return false;
     if (gender_ != other.gender_) return false;
+    if (getNumberOfOrders()
+        != other.getNumberOfOrders()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -329,6 +354,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAge();
     hash = (37 * hash) + GENDER_FIELD_NUMBER;
     hash = (53 * hash) + gender_;
+    hash = (37 * hash) + NUMBER_OF_ORDERS_FIELD_NUMBER;
+    hash = (53 * hash) + getNumberOfOrders();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -472,6 +499,8 @@ private static final long serialVersionUID = 0L;
 
       gender_ = 0;
 
+      numberOfOrders_ = 0;
+
       return this;
     }
 
@@ -503,6 +532,7 @@ private static final long serialVersionUID = 0L;
       result.name_ = name_;
       result.age_ = age_;
       result.gender_ = gender_;
+      result.numberOfOrders_ = numberOfOrders_;
       onBuilt();
       return result;
     }
@@ -567,6 +597,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.gender_ != 0) {
         setGenderValue(other.getGenderValue());
+      }
+      if (other.getNumberOfOrders() != 0) {
+        setNumberOfOrders(other.getNumberOfOrders());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -861,6 +894,37 @@ private static final long serialVersionUID = 0L;
     public Builder clearGender() {
       
       gender_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int numberOfOrders_ ;
+    /**
+     * <code>int32 number_of_orders = 6;</code>
+     * @return The numberOfOrders.
+     */
+    @java.lang.Override
+    public int getNumberOfOrders() {
+      return numberOfOrders_;
+    }
+    /**
+     * <code>int32 number_of_orders = 6;</code>
+     * @param value The numberOfOrders to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumberOfOrders(int value) {
+      
+      numberOfOrders_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 number_of_orders = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumberOfOrders() {
+      
+      numberOfOrders_ = 0;
       onChanged();
       return this;
     }

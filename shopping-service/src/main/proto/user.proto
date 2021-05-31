@@ -11,6 +11,7 @@ service UserService {
 
 message UserRequest {
   string userName = 1;
+  string id = 2;
 }
 
 message UserResponse {
@@ -19,6 +20,7 @@ message UserResponse {
   string name = 3;
   int32 age = 4;
   Gender gender = 5;
+  int32 number_of_orders = 6;
 }
 
 enum Gender {
