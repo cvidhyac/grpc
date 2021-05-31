@@ -14,29 +14,29 @@ public final class UserServiceGrpc {
   public static final String SERVICE_NAME = "com.learn.grpc.UserService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.learn.grpc.stubs.UserRequest,
-      com.learn.grpc.stubs.UserResponse> getGetUserDetailsMethod;
+  private static volatile io.grpc.MethodDescriptor<UserRequest,
+      UserResponse> getGetUserDetailsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getUserDetails",
-      requestType = com.learn.grpc.stubs.UserRequest.class,
-      responseType = com.learn.grpc.stubs.UserResponse.class,
+      requestType = UserRequest.class,
+      responseType = UserResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.learn.grpc.stubs.UserRequest,
-      com.learn.grpc.stubs.UserResponse> getGetUserDetailsMethod() {
-    io.grpc.MethodDescriptor<com.learn.grpc.stubs.UserRequest, com.learn.grpc.stubs.UserResponse> getGetUserDetailsMethod;
+  public static io.grpc.MethodDescriptor<UserRequest,
+      UserResponse> getGetUserDetailsMethod() {
+    io.grpc.MethodDescriptor<UserRequest, UserResponse> getGetUserDetailsMethod;
     if ((getGetUserDetailsMethod = UserServiceGrpc.getGetUserDetailsMethod) == null) {
       synchronized (UserServiceGrpc.class) {
         if ((getGetUserDetailsMethod = UserServiceGrpc.getGetUserDetailsMethod) == null) {
           UserServiceGrpc.getGetUserDetailsMethod = getGetUserDetailsMethod =
-              io.grpc.MethodDescriptor.<com.learn.grpc.stubs.UserRequest, com.learn.grpc.stubs.UserResponse>newBuilder()
+              io.grpc.MethodDescriptor.<UserRequest, UserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getUserDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.learn.grpc.stubs.UserRequest.getDefaultInstance()))
+                  UserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.learn.grpc.stubs.UserResponse.getDefaultInstance()))
+                  UserResponse.getDefaultInstance()))
               .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("getUserDetails"))
               .build();
         }
@@ -95,8 +95,8 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public void getUserDetails(com.learn.grpc.stubs.UserRequest request,
-        io.grpc.stub.StreamObserver<com.learn.grpc.stubs.UserResponse> responseObserver) {
+    public void getUserDetails(UserRequest request,
+        io.grpc.stub.StreamObserver<UserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserDetailsMethod(), responseObserver);
     }
 
@@ -106,8 +106,8 @@ public final class UserServiceGrpc {
             getGetUserDetailsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.learn.grpc.stubs.UserRequest,
-                com.learn.grpc.stubs.UserResponse>(
+                  UserRequest,
+                  UserResponse>(
                   this, METHODID_GET_USER_DETAILS)))
           .build();
     }
@@ -129,8 +129,8 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public void getUserDetails(com.learn.grpc.stubs.UserRequest request,
-        io.grpc.stub.StreamObserver<com.learn.grpc.stubs.UserResponse> responseObserver) {
+    public void getUserDetails(UserRequest request,
+        io.grpc.stub.StreamObserver<UserResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetUserDetailsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -152,7 +152,7 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public com.learn.grpc.stubs.UserResponse getUserDetails(com.learn.grpc.stubs.UserRequest request) {
+    public UserResponse getUserDetails(UserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUserDetailsMethod(), getCallOptions(), request);
     }
@@ -174,8 +174,8 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.learn.grpc.stubs.UserResponse> getUserDetails(
-        com.learn.grpc.stubs.UserRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<UserResponse> getUserDetails(
+        UserRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetUserDetailsMethod(), getCallOptions()), request);
     }
@@ -201,8 +201,8 @@ public final class UserServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_USER_DETAILS:
-          serviceImpl.getUserDetails((com.learn.grpc.stubs.UserRequest) request,
-              (io.grpc.stub.StreamObserver<com.learn.grpc.stubs.UserResponse>) responseObserver);
+          serviceImpl.getUserDetails((UserRequest) request,
+              (io.grpc.stub.StreamObserver<UserResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -226,7 +226,7 @@ public final class UserServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.learn.grpc.stubs.User.getDescriptor();
+      return User.getDescriptor();
     }
 
     @java.lang.Override

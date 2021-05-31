@@ -14,29 +14,29 @@ public final class OrderServiceGrpc {
   public static final String SERVICE_NAME = "com.learn.grpc.OrderService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.learn.grpc.stubs.OrderRequest,
-      com.learn.grpc.stubs.OrderResponse> getGetOrdersForUserMethod;
+  private static volatile io.grpc.MethodDescriptor<OrderRequest,
+      OrderResponse> getGetOrdersForUserMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getOrdersForUser",
-      requestType = com.learn.grpc.stubs.OrderRequest.class,
-      responseType = com.learn.grpc.stubs.OrderResponse.class,
+      requestType = OrderRequest.class,
+      responseType = OrderResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.learn.grpc.stubs.OrderRequest,
-      com.learn.grpc.stubs.OrderResponse> getGetOrdersForUserMethod() {
-    io.grpc.MethodDescriptor<com.learn.grpc.stubs.OrderRequest, com.learn.grpc.stubs.OrderResponse> getGetOrdersForUserMethod;
+  public static io.grpc.MethodDescriptor<OrderRequest,
+      OrderResponse> getGetOrdersForUserMethod() {
+    io.grpc.MethodDescriptor<OrderRequest, OrderResponse> getGetOrdersForUserMethod;
     if ((getGetOrdersForUserMethod = OrderServiceGrpc.getGetOrdersForUserMethod) == null) {
       synchronized (OrderServiceGrpc.class) {
         if ((getGetOrdersForUserMethod = OrderServiceGrpc.getGetOrdersForUserMethod) == null) {
           OrderServiceGrpc.getGetOrdersForUserMethod = getGetOrdersForUserMethod =
-              io.grpc.MethodDescriptor.<com.learn.grpc.stubs.OrderRequest, com.learn.grpc.stubs.OrderResponse>newBuilder()
+              io.grpc.MethodDescriptor.<OrderRequest, OrderResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getOrdersForUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.learn.grpc.stubs.OrderRequest.getDefaultInstance()))
+                  OrderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.learn.grpc.stubs.OrderResponse.getDefaultInstance()))
+                  OrderResponse.getDefaultInstance()))
               .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("getOrdersForUser"))
               .build();
         }
@@ -95,8 +95,8 @@ public final class OrderServiceGrpc {
 
     /**
      */
-    public void getOrdersForUser(com.learn.grpc.stubs.OrderRequest request,
-        io.grpc.stub.StreamObserver<com.learn.grpc.stubs.OrderResponse> responseObserver) {
+    public void getOrdersForUser(OrderRequest request,
+        io.grpc.stub.StreamObserver<OrderResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrdersForUserMethod(), responseObserver);
     }
 
@@ -106,8 +106,8 @@ public final class OrderServiceGrpc {
             getGetOrdersForUserMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.learn.grpc.stubs.OrderRequest,
-                com.learn.grpc.stubs.OrderResponse>(
+                  OrderRequest,
+                  OrderResponse>(
                   this, METHODID_GET_ORDERS_FOR_USER)))
           .build();
     }
@@ -129,8 +129,8 @@ public final class OrderServiceGrpc {
 
     /**
      */
-    public void getOrdersForUser(com.learn.grpc.stubs.OrderRequest request,
-        io.grpc.stub.StreamObserver<com.learn.grpc.stubs.OrderResponse> responseObserver) {
+    public void getOrdersForUser(OrderRequest request,
+        io.grpc.stub.StreamObserver<OrderResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetOrdersForUserMethod(), getCallOptions()), request, responseObserver);
     }
@@ -152,7 +152,7 @@ public final class OrderServiceGrpc {
 
     /**
      */
-    public com.learn.grpc.stubs.OrderResponse getOrdersForUser(com.learn.grpc.stubs.OrderRequest request) {
+    public OrderResponse getOrdersForUser(OrderRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetOrdersForUserMethod(), getCallOptions(), request);
     }
@@ -174,8 +174,8 @@ public final class OrderServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.learn.grpc.stubs.OrderResponse> getOrdersForUser(
-        com.learn.grpc.stubs.OrderRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<OrderResponse> getOrdersForUser(
+        OrderRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetOrdersForUserMethod(), getCallOptions()), request);
     }
@@ -201,8 +201,8 @@ public final class OrderServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_ORDERS_FOR_USER:
-          serviceImpl.getOrdersForUser((com.learn.grpc.stubs.OrderRequest) request,
-              (io.grpc.stub.StreamObserver<com.learn.grpc.stubs.OrderResponse>) responseObserver);
+          serviceImpl.getOrdersForUser((OrderRequest) request,
+              (io.grpc.stub.StreamObserver<OrderResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -226,7 +226,7 @@ public final class OrderServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.learn.grpc.stubs.OrderOuterClass.getDescriptor();
+      return OrderOuterClass.getDescriptor();
     }
 
     @java.lang.Override

@@ -102,15 +102,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.learn.grpc.stubs.OrderOuterClass.internal_static_com_learn_grpc_Order_descriptor;
+    return OrderOuterClass.internal_static_com_learn_grpc_Order_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.learn.grpc.stubs.OrderOuterClass.internal_static_com_learn_grpc_Order_fieldAccessorTable
+    return OrderOuterClass.internal_static_com_learn_grpc_Order_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.learn.grpc.stubs.Order.class, com.learn.grpc.stubs.Order.Builder.class);
+            Order.class, Order.Builder.class);
   }
 
   public static final int USER_ID_FIELD_NUMBER = 1;
@@ -251,10 +251,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.learn.grpc.stubs.Order)) {
+    if (!(obj instanceof Order)) {
       return super.equals(obj);
     }
-    com.learn.grpc.stubs.Order other = (com.learn.grpc.stubs.Order) obj;
+    Order other = (Order) obj;
 
     if (getUserId()
         != other.getUserId()) return false;
@@ -299,69 +299,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.learn.grpc.stubs.Order parseFrom(
+  public static Order parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.learn.grpc.stubs.Order parseFrom(
+  public static Order parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.learn.grpc.stubs.Order parseFrom(
+  public static Order parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.learn.grpc.stubs.Order parseFrom(
+  public static Order parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.learn.grpc.stubs.Order parseFrom(byte[] data)
+  public static Order parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.learn.grpc.stubs.Order parseFrom(
+  public static Order parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.learn.grpc.stubs.Order parseFrom(java.io.InputStream input)
+  public static Order parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.learn.grpc.stubs.Order parseFrom(
+  public static Order parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.learn.grpc.stubs.Order parseDelimitedFrom(java.io.InputStream input)
+  public static Order parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.learn.grpc.stubs.Order parseDelimitedFrom(
+  public static Order parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.learn.grpc.stubs.Order parseFrom(
+  public static Order parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.learn.grpc.stubs.Order parseFrom(
+  public static Order parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -374,7 +374,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.learn.grpc.stubs.Order prototype) {
+  public static Builder newBuilder(Order prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -395,18 +395,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.learn.grpc.Order)
-      com.learn.grpc.stubs.OrderOrBuilder {
+      OrderOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.learn.grpc.stubs.OrderOuterClass.internal_static_com_learn_grpc_Order_descriptor;
+      return OrderOuterClass.internal_static_com_learn_grpc_Order_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.learn.grpc.stubs.OrderOuterClass.internal_static_com_learn_grpc_Order_fieldAccessorTable
+      return OrderOuterClass.internal_static_com_learn_grpc_Order_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.learn.grpc.stubs.Order.class, com.learn.grpc.stubs.Order.Builder.class);
+              Order.class, Order.Builder.class);
     }
 
     // Construct using com.learn.grpc.stubs.Order.newBuilder()
@@ -447,17 +447,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.learn.grpc.stubs.OrderOuterClass.internal_static_com_learn_grpc_Order_descriptor;
+      return OrderOuterClass.internal_static_com_learn_grpc_Order_descriptor;
     }
 
     @java.lang.Override
-    public com.learn.grpc.stubs.Order getDefaultInstanceForType() {
-      return com.learn.grpc.stubs.Order.getDefaultInstance();
+    public Order getDefaultInstanceForType() {
+      return Order.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.learn.grpc.stubs.Order build() {
-      com.learn.grpc.stubs.Order result = buildPartial();
+    public Order build() {
+      Order result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -465,8 +465,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.learn.grpc.stubs.Order buildPartial() {
-      com.learn.grpc.stubs.Order result = new com.learn.grpc.stubs.Order(this);
+    public Order buildPartial() {
+      Order result = new Order(this);
       result.userId_ = userId_;
       result.orderId_ = orderId_;
       result.noOfItems_ = noOfItems_;
@@ -514,16 +514,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.learn.grpc.stubs.Order) {
-        return mergeFrom((com.learn.grpc.stubs.Order)other);
+      if (other instanceof Order) {
+        return mergeFrom((Order)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.learn.grpc.stubs.Order other) {
-      if (other == com.learn.grpc.stubs.Order.getDefaultInstance()) return this;
+    public Builder mergeFrom(Order other) {
+      if (other == Order.getDefaultInstance()) return this;
       if (other.getUserId() != 0) {
         setUserId(other.getUserId());
       }
@@ -554,11 +554,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.learn.grpc.stubs.Order parsedMessage = null;
+      Order parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.learn.grpc.stubs.Order) e.getUnfinishedMessage();
+        parsedMessage = (Order) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -827,12 +827,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:com.learn.grpc.Order)
-  private static final com.learn.grpc.stubs.Order DEFAULT_INSTANCE;
+  private static final Order DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.learn.grpc.stubs.Order();
+    DEFAULT_INSTANCE = new Order();
   }
 
-  public static com.learn.grpc.stubs.Order getDefaultInstance() {
+  public static Order getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public com.learn.grpc.stubs.Order getDefaultInstanceForType() {
+  public Order getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

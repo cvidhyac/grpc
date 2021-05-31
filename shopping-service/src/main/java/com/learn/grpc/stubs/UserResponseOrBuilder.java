@@ -52,7 +52,7 @@ public interface UserResponseOrBuilder extends
    * <code>.com.learn.grpc.Gender gender = 5;</code>
    * @return The gender.
    */
-  com.learn.grpc.stubs.Gender getGender();
+  Gender getGender();
 
   /**
    * <code>int32 number_of_orders = 6;</code>

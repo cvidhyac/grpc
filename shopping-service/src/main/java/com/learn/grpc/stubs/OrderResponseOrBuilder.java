@@ -10,12 +10,12 @@ public interface OrderResponseOrBuilder extends
   /**
    * <code>repeated .com.learn.grpc.Order order = 1;</code>
    */
-  java.util.List<com.learn.grpc.stubs.Order> 
+  java.util.List<Order>
       getOrderList();
   /**
    * <code>repeated .com.learn.grpc.Order order = 1;</code>
    */
-  com.learn.grpc.stubs.Order getOrder(int index);
+  Order getOrder(int index);
   /**
    * <code>repeated .com.learn.grpc.Order order = 1;</code>
    */
@@ -23,11 +23,11 @@ public interface OrderResponseOrBuilder extends
   /**
    * <code>repeated .com.learn.grpc.Order order = 1;</code>
    */
-  java.util.List<? extends com.learn.grpc.stubs.OrderOrBuilder> 
+  java.util.List<? extends OrderOrBuilder>
       getOrderOrBuilderList();
   /**
    * <code>repeated .com.learn.grpc.Order order = 1;</code>
    */
-  com.learn.grpc.stubs.OrderOrBuilder getOrderOrBuilder(
+  OrderOrBuilder getOrderOrBuilder(
       int index);
 }

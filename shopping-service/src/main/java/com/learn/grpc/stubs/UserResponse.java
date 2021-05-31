@@ -105,15 +105,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.learn.grpc.stubs.User.internal_static_com_learn_grpc_UserResponse_descriptor;
+    return User.internal_static_com_learn_grpc_UserResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.learn.grpc.stubs.User.internal_static_com_learn_grpc_UserResponse_fieldAccessorTable
+    return User.internal_static_com_learn_grpc_UserResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.learn.grpc.stubs.UserResponse.class, com.learn.grpc.stubs.UserResponse.Builder.class);
+            UserResponse.class, UserResponse.Builder.class);
   }
 
   public static final int ID_FIELD_NUMBER = 1;
@@ -227,10 +227,10 @@ private static final long serialVersionUID = 0L;
    * <code>.com.learn.grpc.Gender gender = 5;</code>
    * @return The gender.
    */
-  @java.lang.Override public com.learn.grpc.stubs.Gender getGender() {
+  @java.lang.Override public Gender getGender() {
     @SuppressWarnings("deprecation")
-    com.learn.grpc.stubs.Gender result = com.learn.grpc.stubs.Gender.valueOf(gender_);
-    return result == null ? com.learn.grpc.stubs.Gender.UNRECOGNIZED : result;
+    Gender result = Gender.valueOf(gender_);
+    return result == null ? Gender.UNRECOGNIZED : result;
   }
 
   public static final int NUMBER_OF_ORDERS_FIELD_NUMBER = 6;
@@ -270,7 +270,7 @@ private static final long serialVersionUID = 0L;
     if (age_ != 0) {
       output.writeInt32(4, age_);
     }
-    if (gender_ != com.learn.grpc.stubs.Gender.MALE.getNumber()) {
+    if (gender_ != Gender.MALE.getNumber()) {
       output.writeEnum(5, gender_);
     }
     if (numberOfOrders_ != 0) {
@@ -299,7 +299,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(4, age_);
     }
-    if (gender_ != com.learn.grpc.stubs.Gender.MALE.getNumber()) {
+    if (gender_ != Gender.MALE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, gender_);
     }
@@ -317,10 +317,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.learn.grpc.stubs.UserResponse)) {
+    if (!(obj instanceof UserResponse)) {
       return super.equals(obj);
     }
-    com.learn.grpc.stubs.UserResponse other = (com.learn.grpc.stubs.UserResponse) obj;
+    UserResponse other = (UserResponse) obj;
 
     if (getId()
         != other.getId()) return false;
@@ -361,69 +361,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.learn.grpc.stubs.UserResponse parseFrom(
+  public static UserResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.learn.grpc.stubs.UserResponse parseFrom(
+  public static UserResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.learn.grpc.stubs.UserResponse parseFrom(
+  public static UserResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.learn.grpc.stubs.UserResponse parseFrom(
+  public static UserResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.learn.grpc.stubs.UserResponse parseFrom(byte[] data)
+  public static UserResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.learn.grpc.stubs.UserResponse parseFrom(
+  public static UserResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.learn.grpc.stubs.UserResponse parseFrom(java.io.InputStream input)
+  public static UserResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.learn.grpc.stubs.UserResponse parseFrom(
+  public static UserResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.learn.grpc.stubs.UserResponse parseDelimitedFrom(java.io.InputStream input)
+  public static UserResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.learn.grpc.stubs.UserResponse parseDelimitedFrom(
+  public static UserResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.learn.grpc.stubs.UserResponse parseFrom(
+  public static UserResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.learn.grpc.stubs.UserResponse parseFrom(
+  public static UserResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -436,7 +436,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.learn.grpc.stubs.UserResponse prototype) {
+  public static Builder newBuilder(UserResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -457,18 +457,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.learn.grpc.UserResponse)
-      com.learn.grpc.stubs.UserResponseOrBuilder {
+      UserResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.learn.grpc.stubs.User.internal_static_com_learn_grpc_UserResponse_descriptor;
+      return User.internal_static_com_learn_grpc_UserResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.learn.grpc.stubs.User.internal_static_com_learn_grpc_UserResponse_fieldAccessorTable
+      return User.internal_static_com_learn_grpc_UserResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.learn.grpc.stubs.UserResponse.class, com.learn.grpc.stubs.UserResponse.Builder.class);
+              UserResponse.class, UserResponse.Builder.class);
     }
 
     // Construct using com.learn.grpc.stubs.UserResponse.newBuilder()
@@ -507,17 +507,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.learn.grpc.stubs.User.internal_static_com_learn_grpc_UserResponse_descriptor;
+      return User.internal_static_com_learn_grpc_UserResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.learn.grpc.stubs.UserResponse getDefaultInstanceForType() {
-      return com.learn.grpc.stubs.UserResponse.getDefaultInstance();
+    public UserResponse getDefaultInstanceForType() {
+      return UserResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.learn.grpc.stubs.UserResponse build() {
-      com.learn.grpc.stubs.UserResponse result = buildPartial();
+    public UserResponse build() {
+      UserResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -525,8 +525,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.learn.grpc.stubs.UserResponse buildPartial() {
-      com.learn.grpc.stubs.UserResponse result = new com.learn.grpc.stubs.UserResponse(this);
+    public UserResponse buildPartial() {
+      UserResponse result = new UserResponse(this);
       result.id_ = id_;
       result.userName_ = userName_;
       result.name_ = name_;
@@ -571,16 +571,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.learn.grpc.stubs.UserResponse) {
-        return mergeFrom((com.learn.grpc.stubs.UserResponse)other);
+      if (other instanceof UserResponse) {
+        return mergeFrom((UserResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.learn.grpc.stubs.UserResponse other) {
-      if (other == com.learn.grpc.stubs.UserResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(UserResponse other) {
+      if (other == UserResponse.getDefaultInstance()) return this;
       if (other.getId() != 0) {
         setId(other.getId());
       }
@@ -616,11 +616,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.learn.grpc.stubs.UserResponse parsedMessage = null;
+      UserResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.learn.grpc.stubs.UserResponse) e.getUnfinishedMessage();
+        parsedMessage = (UserResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -868,17 +868,17 @@ private static final long serialVersionUID = 0L;
      * @return The gender.
      */
     @java.lang.Override
-    public com.learn.grpc.stubs.Gender getGender() {
+    public Gender getGender() {
       @SuppressWarnings("deprecation")
-      com.learn.grpc.stubs.Gender result = com.learn.grpc.stubs.Gender.valueOf(gender_);
-      return result == null ? com.learn.grpc.stubs.Gender.UNRECOGNIZED : result;
+      Gender result = Gender.valueOf(gender_);
+      return result == null ? Gender.UNRECOGNIZED : result;
     }
     /**
      * <code>.com.learn.grpc.Gender gender = 5;</code>
      * @param value The gender to set.
      * @return This builder for chaining.
      */
-    public Builder setGender(com.learn.grpc.stubs.Gender value) {
+    public Builder setGender(Gender value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -945,12 +945,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:com.learn.grpc.UserResponse)
-  private static final com.learn.grpc.stubs.UserResponse DEFAULT_INSTANCE;
+  private static final UserResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.learn.grpc.stubs.UserResponse();
+    DEFAULT_INSTANCE = new UserResponse();
   }
 
-  public static com.learn.grpc.stubs.UserResponse getDefaultInstance() {
+  public static UserResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -975,7 +975,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public com.learn.grpc.stubs.UserResponse getDefaultInstanceForType() {
+  public UserResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
