@@ -22,17 +22,14 @@ public class UserServer {
           .build()
           .start();
 
-      Runtime.getRuntime().addShutdownHook(new Thread() {
-        @Override
-        public void run() {
-          LOGGER.info("Clean Server Shutdown incase JVM was shutdown");
-          try {
-            UserServer.this.stopServer();
-          } catch (InterruptedException e) {
-            e.printStackTrace();
-          }
+      Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+        LOGGER.info("Clean Server Shutdown incase JVM was shutdown");
+        try {
+          UserServer.this.stopServer();
+        } catch (InterruptedException e) {
+          e.printStackTrace();
         }
-      });
+      }));
     } catch (IOException ex) {
       LOGGER.log(Level.SEVERE, "Server did not start", ex);
     }
